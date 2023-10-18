@@ -20,4 +20,4 @@ RUN npm run build
 EXPOSE 4200
 
 # Define el comando para iniciar el servidor de desarrollo de Angular
-CMD [ "ng", "serve", "--host", "0.0.0.0" ]
+CMD [ "npm", "start" ]
