@@ -19,5 +19,5 @@ RUN npm run build
 # Expone el puerto 80 en el contenedor
 EXPOSE 4200
 
-# Define el comando para iniciar la aplicación
-CMD [ "npm", "start" ]
+# Define el comando para iniciar el servidor de desarrollo de Angular
+CMD [ "ng", "serve", "--host", "0.0.0.0" ]
