@@ -1,0 +1,45 @@
+
+<mat-card>
+    <mat-card-content class="centered-card">
+        <mat-card>
+            <mat-card-content class="esquinader">
+                <a  href="">contacto</a>
+                <a  href="">acerca de nosotros</a>  
+            </mat-card-content>
+        </mat-card>
+    </mat-card-content>
+</mat-card>
+<br>
+<mat-card>
+    <mat-card-content class="centered-card2">
+        <mat-card>
+            <mat-card-content class="card2">    
+                        <mat-card>
+                            <mat-card-content class="cardLogin">
+                                <form (ngSubmit)="login()">
+                                    <h2>Bienvenido</h2>
+                                    <mat-form-field class="inputs">
+                                                <mat-label>Usuario/Email</mat-label>
+                                                <input matInput id="email" [(ngModel)]="valorEmail" type="email">
+                                    </mat-form-field>
+                                    <mat-form-field class="inputs">
+                                                <mat-label>contrasena</mat-label>
+                                                <input matInput id="pass" [(ngModel)]="valorPass" type="password">
+                                    </mat-form-field>
+                                    <span class="span-element"></span>
+                                    <div class="filas">
+                                                <button mat-button class="botones">registrarse</button>
+                                                <button mat-button type="submit" class="botones">Login</button>
+                                    </div>
+                                </form>
+                                <span class="span-element"></span>
+                                <div class="filas">
+                                            <label>olvidaste tu contrasena?</label>
+                                            <a href="">olvide mi contrasena</a>
+                                </div>
+                            </mat-card-content>
+                        </mat-card>
+            </mat-card-content>
+        </mat-card>
+    </mat-card-content>
+</mat-card>     

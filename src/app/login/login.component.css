@@ -1,0 +1,87 @@
+
+  /* Estilo para el div centrado */
+  .centered-card {
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    width: 100%; /* Ancho del div */
+    height: 100%; /* Alto del div */
+    background-color: black; /* Fondo rojo */
+  }
+
+  .centered-card2 {
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    width: 100%; /* Ancho del div */
+    height: 100%; /* Alto del div */
+    background-color: white; /* Fondo rojo */
+  }
+
+  .card2{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 1200px;
+    height: 500px; 
+    background-color: purple;
+  }
+
+  .cardLogin{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start; /* Esto alineará los elementos hacia arriba en la columna */
+    width: 100%;
+    height: 300px;
+    background-color: grey;
+    text-align: center;
+  }
+
+/* Estilo para los elementos <mat-form-field> */
+.inputs {
+  width: 100%;
+  margin-bottom: 10px; /* Añade espacio entre los campos */
+}
+
+.botones{
+  height: 40px;
+  width: 100px;
+  border-radius: 5px;
+  background-color: aqua;
+  margin-right: 10px;
+}
+
+.filas{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin-right: 10px;
+}
+
+.span-element {
+  margin-bottom: 20px; /* Agrega espacio debajo del elemento span */
+}
+
+.card{
+justify-content: center;
+align-items: center;
+display: flex;
+background-color: grey;
+}
+
+/* Estilo CSS para agregar espacio entre los elementos <a> */
+.esquinader a {
+  margin-right: 10px; /* Agrega espacio a la derecha de cada enlace */
+}
+
+/* Alinea los elementos <a> en el eje principal (horizontal) */
+.esquinader {
+  display: flex;
+  justify-content: space-between; /* Distribuye los elementos en el espacio horizontal */
+  width: 100%;
+}
