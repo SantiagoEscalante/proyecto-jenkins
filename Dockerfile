@@ -7,7 +7,7 @@ RUN mkdir -p /app
 WORKDIR /app
 
 # Copia los archivos package.json y package-lock.json al directorio de trabajo
-COPY package.json/app
+COPY package.json /app
 
 # Instala las dependencias
 RUN npm install
