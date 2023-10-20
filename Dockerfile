@@ -1,23 +1,25 @@
-# Use an official Node.js runtime as a parent image
-FROM node:18
+# Usa una imagen de Node.js como base
+FROM node:18 as build
 
-# Establece el directorio de trabajo en /app
+RUN mkdir -p /app
+
+# Establece el directorio de trabajo en /usr/src/app
 WORKDIR /app
 
-# Copia el archivo de configuración de dependencias (package.json y package-lock.json)
-COPY package*.json ./
+# Copia los archivos package.json y package-lock.json al directorio de trabajo
+COPY package.json /app
 
-# Instala las dependencias del proyecto
+# Instala las dependencias
 RUN npm install
 
-# Copia todo el código de tu proyecto al contenedor
-COPY . .
+# Copia el código fuente de la aplicación al contenedor
+COPY . /app
 
-# Compila la aplicación Angular (esto puede variar dependiendo de tu configuración)
-RUN npm run build
+# Compila la aplicación Angular
+RUN npm run build --prod
 
-# Expone el puerto 80 en el contenedor
-EXPOSE 4200
+# Segunda etapa: crea una imagen Nginx para servir la aplicación Angular
+FROM nginx:latest
 
-# Define el comando para iniciar la aplicación
-CMD [ "npm", "start" ]
+# Copia los archivos de construcción desde la etapa anterior
+COPY --from=build /app/dist/proyecto-jenkins /usr/share/nginx/html
