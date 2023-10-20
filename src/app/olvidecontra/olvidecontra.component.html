@@ -1,0 +1,27 @@
+<mat-card>
+    <mat-card-content class="centered-card">
+                <a  class="a" routerLink="/acerca">contacto</a>
+                <a  class="a" routerLink="/acerca">acerca de nosotros</a>  
+    </mat-card-content>
+</mat-card>
+<br>
+<mat-card>
+    <mat-card-content class="centered-card2">  
+                        <mat-card>
+                            <mat-card-content class="cardLogin">
+                                <form (ngSubmit)="recuperar()">
+                                    <h2>Recuperar Contraseña</h2>
+                                    <mat-form-field class="inputs">
+                                                <mat-label>Email</mat-label>
+                                                <input matInput id="email" [(ngModel)]="valorEmail" type="email" name="email">
+                                    </mat-form-field>
+                                    <span class="span-element"></span>
+                                    <div class="filas">
+                                                <button (click)="volver()" mat-raised-button color="warn" class="botones">Volver</button>
+                                                <button mat-raised-button color="primary" type="submit" class="botones">Enviar</button>
+                                    </div>
+                                </form>
+                            </mat-card-content>
+                        </mat-card>
+    </mat-card-content>
+</mat-card>     

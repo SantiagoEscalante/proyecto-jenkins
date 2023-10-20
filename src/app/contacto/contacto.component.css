@@ -1,0 +1,31 @@
+/* Estilo para el div centrado */
+.centered-card {
+    justify-content: right;
+    display: flex;
+    width: 100%; /* Ancho del div */
+    height: 30px; /* Alto del div */
+    background-color: black; /* Fondo rojo */
+  }
+
+/* Alinea los elementos <a> en el eje principal (horizontal) */
+.a {
+   margin-right: 10px;
+   margin-left: 20px;
+   color: white;
+  }
+
+  .card{
+    background-color: white;
+    height: 480px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .botonesCancel{
+    height: 40px;
+    width: 100px;
+    border-radius: 5px;
+    background-color: grey;
+    margin-top: 300px;
+  }

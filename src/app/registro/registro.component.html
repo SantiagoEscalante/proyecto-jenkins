@@ -1,0 +1,56 @@
+<mat-card>
+    <mat-card-content class="centered-card">
+                <a  class="a" routerLink="/acerca">contacto</a>
+                <a  class="a" routerLink="/acerca">acerca de nosotros</a>  
+    </mat-card-content>
+</mat-card>
+<br>
+<h1 class="titulo">Registrarse</h1>
+<mat-card>
+    <mat-card-content class="cardPadre">
+            <form (ngSubmit)="registro()">
+                <mat-card>
+                    <mat-card-content class="cardsColor">
+                        <mat-form-field class="inputs">
+                            <mat-label>Nombre</mat-label>
+                            <input matInput id="nombre" [(ngModel)]="valorNombre" name="nombre" type="text">
+                        </mat-form-field>
+                        <mat-form-field class="inputs">
+                            <mat-label>Apellido</mat-label>
+                            <input  matInput id="apellido" [(ngModel)]="valorApellido" name="apellido" type="text">
+                        </mat-form-field>
+                    </mat-card-content>
+                </mat-card>
+                <mat-card>
+                    <mat-card-content class="cards">
+                        <mat-form-field class="inputs">
+                            <mat-label>Edad</mat-label>
+                            <input matInput id="edad" [(ngModel)]="valorEdad" name="edad" type="text">
+                        </mat-form-field>
+                        <mat-form-field class="inputs">
+                            <mat-label>Usuario/Email</mat-label>
+                            <input matInput id="email" [(ngModel)]="valorEmail" name="email" type="email">
+                        </mat-form-field>
+                    </mat-card-content>
+                </mat-card>
+                <mat-card>
+                    <mat-card-content class="cardsColor">
+                        <mat-form-field class="inputs">
+                            <mat-label>contrasena</mat-label>
+                            <input matInput id="pass" [(ngModel)]="valorPass" name="pass" type="password">
+                        </mat-form-field>
+                        <mat-form-field class="inputs">
+                            <mat-label>Confirmar contrasena</mat-label>
+                            <input matInput id="confpass" [(ngModel)]="valorConfPass" name="confpass" type="password">
+                        </mat-form-field>
+                    </mat-card-content>
+                </mat-card>
+                <mat-card>
+                    <mat-card-content class="cards">
+                        <button color="warn" class="botonesCancel" (click)="volver()" mat-raised-button>Volver</button>
+                        <button color="primary" class="botonesConfirm" type="submit" mat-raised-button >Confirmar</button>
+                    </mat-card-content>
+                </mat-card>
+            </form>
+    </mat-card-content>
+</mat-card>

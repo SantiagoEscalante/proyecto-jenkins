@@ -1,0 +1,64 @@
+/* Estilo para el div centrado */
+.centered-card {
+    justify-content: right;
+    display: flex;
+    width: 100%; /* Ancho del div */
+    height: 30px; /* Alto del div */
+    background-color: black; /* Fondo rojo */
+}
+
+.a{
+  margin-right: 10px;
+  margin-left: 20px;
+  color: white;
+}
+
+.inputs{
+    margin-right: 10px;
+}
+
+  .cardsColor{
+    display: flex ;
+    align-items: center;
+    background-color: aqua;
+    justify-content: center;
+    width: 500px;
+  }
+  .cardPadre{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height: 100%;
+  }
+
+  .cards{
+    display: flex ;
+    align-items: center;
+    justify-content: center;
+    width:500px ;
+    background-color: lightblue;
+  }
+
+  .botonesConfirm{
+    height: 40px;
+    width: 100px;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-left: 20px;
+  }
+
+  .botonesCancel{
+    height: 40px;
+    width: 100px;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+
+  .titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+  }

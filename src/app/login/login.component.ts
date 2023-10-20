@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { LoginService } from '../login.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-login',
@@ -10,11 +12,10 @@ export class LoginComponent {
   datos:any;
   valorEmail: string = '';
   valorPass: String = '' ;
-  constructor(private servicio: LoginService) {
+  constructor(private servicio: LoginService , private router : Router) {
 
   }
   login(){
-    const inputpass = document.getElementById('pass');
 
     const data = {
       usuario: this.valorEmail,
@@ -25,5 +26,9 @@ export class LoginComponent {
       this.datos=response;
       
     })
+  }
+
+  registrarse(){
+    this.router.navigate(['/registrarse'])
   }
 }

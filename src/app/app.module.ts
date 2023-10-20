@@ -11,11 +11,19 @@ import {MatButtonModule} from '@angular/material/button'
 import {MatInputModule} from '@angular/material/input'
 import {MatCardModule}  from '@angular/material/card'
 import {MatSidenavModule} from '@angular/material/sidenav'
-import {MatDividerModule} from '@angular/material/divider'
+import {MatDividerModule} from '@angular/material/divider';
+import { RegistroComponent } from './registro/registro.component';
+import { AboutComponent } from './about/about.component';
+import { OlvidecontraComponent } from './olvidecontra/olvidecontra.component';
+import { ContactoComponent } from './contacto/contacto.component'
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    RegistroComponent,
+    AboutComponent,
+    OlvidecontraComponent,
+    ContactoComponent
   ],
   imports: [
     BrowserModule,
