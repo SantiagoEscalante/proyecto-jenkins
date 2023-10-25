@@ -24,7 +24,10 @@ export class LoginComponent {
 
     this.servicio.login(data).subscribe((response)=>{
       this.datos=response;
-      
+      console.log(this.datos);
+      if(this.datos.status === 'success'){
+        this.router.navigate(['/home']);
+      }      
     })
   }
 

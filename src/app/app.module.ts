@@ -12,10 +12,15 @@ import {MatInputModule} from '@angular/material/input'
 import {MatCardModule}  from '@angular/material/card'
 import {MatSidenavModule} from '@angular/material/sidenav'
 import {MatDividerModule} from '@angular/material/divider';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatIconModule} from '@angular/material/icon';
 import { RegistroComponent } from './registro/registro.component';
 import { AboutComponent } from './about/about.component';
 import { OlvidecontraComponent } from './olvidecontra/olvidecontra.component';
-import { ContactoComponent } from './contacto/contacto.component'
+import { ContactoComponent } from './contacto/contacto.component';
+import { HomeComponent } from './home/home.component'
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +28,8 @@ import { ContactoComponent } from './contacto/contacto.component'
     RegistroComponent,
     AboutComponent,
     OlvidecontraComponent,
-    ContactoComponent
+    ContactoComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +41,9 @@ import { ContactoComponent } from './contacto/contacto.component'
     MatInputModule,
     MatCardModule,
     MatSidenavModule,
-    MatDividerModule
+    MatDividerModule,
+    MatMenuModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

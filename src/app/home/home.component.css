@@ -1,0 +1,40 @@
+/* Estilo para el div centrado */
+.centered-card {
+    display: flex;
+    width: 100%; /* Ancho del div */
+    height: 30px; /* Alto del div */
+    background-color: black; /* Fondo rojo */
+  }
+
+/* Alinea los elementos <a> en el eje principal (horizontal) */
+.a {
+   margin-right: 10px;
+   margin-left: 20px;
+   color: white;
+  }
+
+  .card{
+    background-color: white;
+    height: 480px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.divMenu{
+    justify-content: left;
+    display: flex;
+    align-items: center;
+}
+
+.divLinks{
+    justify-content: right;
+    display: flex;
+    align-items: center;
+}
+
+.icon{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}

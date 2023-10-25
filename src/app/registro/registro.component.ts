@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { RegistroService } from '../registro.service';
 
 @Component({
   selector: 'app-registro',
@@ -7,6 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./registro.component.css']
 })
 export class RegistroComponent {
+  datos:any;
   valorEmail: string = '';
   valorPass: string = '';
   valorConfPass: string = '';
@@ -14,14 +16,26 @@ export class RegistroComponent {
   valorApellido: string = '';
   valorEdad: number = 0;
 
-  constructor(private router: Router){
+  constructor(private router: Router , private registroSVC : RegistroService){
      
   }
 
   registro(){
-
     //Primero hacemos el llamado al servicio de registro si devuelve ok navegamos al login
-    this.router.navigate(['/']);
+    if(this.valorConfPass === this.valorPass){
+      const data = {
+        nombre: this.valorNombre,
+        apellido: this.valorApellido,
+        edad: this.valorEdad,
+        usuario: this.valorEmail,
+        contra: this.valorPass
+      };
+      this.registroSVC.registro(data).subscribe((response)=>{
+        this.datos=response;
+        console.log(this.datos);
+
+      })
+    }
   }
 
   volver(){
