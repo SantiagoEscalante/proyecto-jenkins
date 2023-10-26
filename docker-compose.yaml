@@ -1,10 +1,10 @@
 version: '3'
 services:
   front:
-    image: santiagoescalante.azurecr.io/frontend:latest
+    image: santiagoescalante.azurecr.io/frontend:v1.1
     ports:
       - "8081:80"
   back:
-    image: santiagoescalante.azurecr.io/backend:latest
+    image: santiagoescalante.azurecr.io/backend:v1.1
     ports:
       - "8085:8085"
