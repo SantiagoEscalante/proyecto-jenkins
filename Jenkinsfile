@@ -4,7 +4,12 @@ pipeline{
         string(name: 'RESOURCE_GROUP',defaultValue:'SOCIUSRGLAB-RG-MODELODEVOPS-DEV',description:'Grupo de recursos')
         string(name: 'BRANCH', defaultValue:env.BRANCH_NAME, description: 'Valor del Ambiente')
     }   
-    agent any
+    agent {
+        docker {
+          image 'aggasth/ubuntu-azcli'
+          args '--privileged --network=host'
+        }
+    }
     stages{
         stage('limpiar workspace'){
             steps{
@@ -19,7 +24,7 @@ pipeline{
                 WEBAPP_NAME = 'sociuswebapptest009'
                 acr = 'santiagoescalante.azurecr.io'
                 azureLog = credentials('AzureCredsSantiago')
-                BUILD_VERSIONF = sh(script: 'git describe --tags', returnStdout: true).trim()
+                BUILD_VERSIONF = sh(script: 'git describe --tags --abbrev=0', returnStdout: true).trim()
             }
             steps{
                  script{
