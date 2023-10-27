@@ -4,12 +4,7 @@ pipeline{
         string(name: 'RESOURCE_GROUP',defaultValue:'SOCIUSRGLAB-RG-MODELODEVOPS-DEV',description:'Grupo de recursos')
         string(name: 'BRANCH', defaultValue:env.BRANCH_NAME, description: 'Valor del Ambiente')
     }   
-    agent {
-        docker {
-          image 'aggasth/ubuntu-azcli'
-          args '--privileged --network=host'
-        }
-    }
+    agent any
     stages{
         stage('limpiar workspace'){
             steps{
